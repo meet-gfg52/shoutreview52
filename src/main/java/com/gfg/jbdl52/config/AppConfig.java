@@ -24,7 +24,7 @@ public class AppConfig {
     Logger logger=LoggerFactory.getLogger(AppConfig.class);
 
 
-    @Value("${mysql.uri}")
+    /*@Value("${mysql.uri}")
     private String uri;
 
     @Value("${mysql.username}")
@@ -32,6 +32,10 @@ public class AppConfig {
 
     @Value("${mysql.password}")
     private String password;
+
+    *//**
+     * Driver manager is able to establish connection because of the mysql driver dependency we added in pom
+     * *//*
 
 
 
@@ -47,7 +51,9 @@ public class AppConfig {
         return null;
     }
 
-    @Bean("postgresConnectBean")
+   *//**
+    *To create bean of connection for multiple types
+    * @Bean("postgresConnectBean")
     public Connection getpostgresonnection(){
         try {
             Connection connection=DriverManager.getConnection(uri,username,password);
@@ -57,7 +63,7 @@ public class AppConfig {
         }
         return null;
     }
-
+*/
 
 
 }
