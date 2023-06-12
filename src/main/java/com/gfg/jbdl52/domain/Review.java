@@ -3,8 +3,6 @@ package com.gfg.jbdl52.domain;
 import com.gfg.jbdl52.service.resource.ReviewResponse;
 import jakarta.persistence.*;
 import lombok.*;
-
-
 /**
  * Assossciation:
  *
@@ -30,7 +28,7 @@ import lombok.*;
 public class Review {
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Double rating;

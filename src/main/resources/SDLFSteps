@@ -1,0 +1,74 @@
+in agile SDLF
+1. Product requirements
+2. There will be spike ( a poc for the demo and approvals)
+3. refine requirements - breaks it into epic ( epic - big milestones to be achieved for whole product)
+4. Design diagram
+    Arch related diagrams
+       1. Activity diagram
+       2. flow diagrams
+       3. High level design
+       4. LLD -> SDE 3 to arch involved
+               entities
+               Schema
+               APIs
+
+       5. API contracts
+              Endpoint
+              Request
+              Response
+              Scenario : ex: swagger of API
+
+       6. one epic is picked per quater
+            epic have multiple backlogs ( backlogs = small milestones to complete the epic) 30
+            sprint - 15 days or 30 days or 10 days
+            5 stories per sprint ( 5 backlogs will be taken as stories)
+
+            Each Story:
+                1. Information
+                2. timeline
+                3. story points
+                4. Acceptance criteria
+
+       backend developers: each stories can be assiged to each developer to work on for a sprint.
+
+       backend devs: SDE1/2 or 3 -> each stories can broken into tasks ->
+            a small change page
+
+
+       scrum -> each day each developer explains the progress of stories.
+
+
+
+       On sprint end. acceptance criteria are matched with work evidance.
+       Either story completes or close
+       or spilled.
+
+       Retrospective of sprint:  discuss and fix the short comings in the previous sprint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
