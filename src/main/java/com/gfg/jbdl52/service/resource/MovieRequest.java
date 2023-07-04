@@ -8,6 +8,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -17,9 +20,9 @@ public class MovieRequest {
     @NotBlank(message = "title cannot be blank")
     private String title;
     private Genre genre;
-
+    private String releaseDate;
     public Movie getMovieFromRequest(){
-        return Movie.builder().title(this.title).genre(genre).rating(0.0).build();
+        return Movie.builder().title(this.title).genre(genre).releaseDate(LocalDate.parse(releaseDate, DateTimeFormatter.ISO_DATE)).rating(0.0).build();
     }
 }
 /***

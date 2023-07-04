@@ -38,6 +38,8 @@ public interface MovieRepository extends JpaRepository<Movie,Long> {
    @Query(value = "select * from movies where genre=?",nativeQuery = true)
    List<Movie> movieView(String genre);
 
+   List<Movie> findAllByOrderByReleaseDate();
+
 
 
 

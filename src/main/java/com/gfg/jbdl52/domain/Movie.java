@@ -9,6 +9,8 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.hibernate.annotations.Generated;
 
+import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -20,7 +22,7 @@ import java.util.List;
 @Table(name="movies")
 @ToString
 @Builder
-public class Movie {
+public class Movie implements Serializable {
 
    @Id
    @Column(name = "id", nullable = false)
@@ -35,6 +37,8 @@ public class Movie {
    private Genre genre;
 
    private String director;
+
+   private LocalDate releaseDate;
    /**
     * one movie can have multiple reivews
     * */
@@ -42,7 +46,7 @@ public class Movie {
    List<Review> reviewList;
 
    public MovieResponse toMovieResponse(){
-      return MovieResponse.builder().title(this.title).rating(this.rating).genre(this.genre).build();
+      return MovieResponse.builder().title(this.title).rating(this.rating).releaseDate(releaseDate.toString()).genre(this.genre).build();
    }
 
 

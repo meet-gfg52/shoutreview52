@@ -1,0 +1,12 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Iv1.fbe4b4060d693c8J
+            clientSecret: 6e6d92708267f581f7474301c3b55a934d17abe4
+          facebook:
+            client-id: Iv1.fbe4b4060d693c8e
+            clientSecret: 6e6d92708267f581f7474301c3b55a934d17abe4
+

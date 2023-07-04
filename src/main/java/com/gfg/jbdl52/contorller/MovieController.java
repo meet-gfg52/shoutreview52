@@ -4,6 +4,7 @@ import com.gfg.jbdl52.domain.Movie;
 import com.gfg.jbdl52.service.MovieService;
 import com.gfg.jbdl52.service.MovieServiceLegacy;
 import com.gfg.jbdl52.service.resource.MovieRequest;
+import com.gfg.jbdl52.service.resource.MovieResponse;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/movie")
@@ -32,7 +34,8 @@ public class MovieController {
 
     @GetMapping
     public ResponseEntity<?> getMovies(){
-        return new ResponseEntity<>(service.getAllMovie(), HttpStatus.OK);
+        List<MovieResponse> response=service.getMoviesForHomePage().stream().map(Movie::toMovieResponse).collect(Collectors.toList());
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
    @GetMapping(value="/{title}")
